@@ -1,0 +1,31 @@
+name: Update README with Recent Activity
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update README with recent activity
+        uses: jamesgeorge007/github-activity-readme@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          COMMIT_MSG: 'chore: update recent activity in README'
+          MAX_LINES: 5
+
+      - name: Update GitHub Stats
+        run: |
+          # This step ensures the stats badges are refreshed
+          # The badges will auto-update when the README is viewed
+          echo "Stats badges will refresh automatically"
