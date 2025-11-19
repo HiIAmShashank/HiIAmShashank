@@ -77,11 +77,10 @@ Azure infrastructure sample demonstrating Data API Builder with Bicep deployment
 - Exploring modern React patterns and server components
 - Developing SharePoint Online solutions and Power Platform applications
 
-## Activity
+## Recent Activity
 
-<!-- RECENT_ACTIVITY:START -->
-*Recent activity will be automatically updated here*
-<!-- RECENT_ACTIVITY:END -->
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
 
 ---
 
